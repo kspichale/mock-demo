@@ -32,9 +32,7 @@ public class VehicleFleetImpl implements VehicleFleet {
 
 	@Override
 	public boolean isAvailable(Vehicle vehicle) {
-		
-		//return availableVehicles.contains(vehicle);
-		return false;
+		return availableVehicles.contains(vehicle);
 	}
 
 }
