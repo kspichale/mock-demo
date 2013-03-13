@@ -1,4 +1,4 @@
 mock-demo
 =========
 
-Demonstrates and compares mocking frameworks.
+Compares state testing and behavior testing with mocks.
