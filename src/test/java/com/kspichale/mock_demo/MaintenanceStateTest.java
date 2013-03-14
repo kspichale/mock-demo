@@ -2,23 +2,22 @@ package com.kspichale.mock_demo;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 
-import com.kspichale.mock_demo.Maintenance;
-import com.kspichale.mock_demo.Vehicle;
-import com.kspichale.mock_demo.VehicleFleet;
-import com.kspichale.mock_demo.VehicleFleetImpl;
-
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = "classpath:repository-context.xml")
+@Transactional
 public class MaintenanceStateTest {
 
-	private Vehicle vehicle = new Vehicle("car");
-	private VehicleFleet fleet = new VehicleFleetImpl();
-
-	@Before
-	public void setUp() {
-		fleet.add(vehicle);
-	}
+	private Vehicle vehicle = new Vehicle();
+	
+	@Autowired
+	private VehicleFleet fleet;
 
 	@Test
 	public void vehicleIsNotAvailableWhenScheduledForMaintenance() {

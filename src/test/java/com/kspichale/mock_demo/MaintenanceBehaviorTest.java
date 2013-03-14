@@ -25,7 +25,7 @@ public class MaintenanceBehaviorTest {
 	public void vehicleIsNotAvailableWhenScheduledForMaintenance() {
 
 		// setup data
-		final Vehicle vehicle = new Vehicle("car");
+		final Vehicle vehicle = new Vehicle();
 		Maintenance maintenance = new Maintenance(vehicle);
 		final VehicleFleet fleet = context.mock(VehicleFleet.class);
 

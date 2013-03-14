@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 
-public class VehicleFleetImpl implements VehicleFleet {
+public class VehicleFleetStub implements VehicleFleet {
 
 	private final Collection<Vehicle> availableVehicles = new HashSet<Vehicle>();
 	private final Collection<Vehicle> notAvailableVehicles = new HashSet<Vehicle>();
